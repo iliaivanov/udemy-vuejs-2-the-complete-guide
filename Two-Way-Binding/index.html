@@ -1,9 +1,13 @@
 <script src="../vue.js"></script>
 
 <div id="app">
-    <button v-on:click="counter++">Increment</button>
-    <button v-on:click="counter--">Decrease</button>
-    <button v-on:click="secondCounter++">Increment Second</button>
+    <!-- 
+         v-on:click - for events shorthand can be used: @click
+         v-bind:href - the same for bindings but syntax is different: :href
+    -->
+    <button @click="counter++">Increment</button>
+    <button @click="counter--">Decrease</button>
+    <button @click="secondCounter++">Increment Second</button>
     <p>Counter: {{ counter }} | {{ secondCounter }}</p>
     <p>Result: {{ result() }} | {{ output }}</p>
 </div>
