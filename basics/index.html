@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>VueJS Basics</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-on:input="changeMessage" />
+        <p>{{message}}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Yolo!'
+            },
+            methods: {
+                changeMessage: function (event) {
+                    this.message = event.target.value;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
