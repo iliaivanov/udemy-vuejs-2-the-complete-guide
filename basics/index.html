@@ -7,6 +7,8 @@
 </head>
 <body>
     <div id="app">
+        <h1 v-once>{{ message }}</h1>
+
         <input type="text" v-on:input="changeMessage" />
         <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
     </div>
@@ -23,6 +25,7 @@
                     this.message = event.target.value;
                 },
                 sayHello: function () {
+                    this.message = 'Mhm!';
                     return this.message;
                 }
             }
