@@ -21,10 +21,22 @@
             counter: 0,
             secondCounter: 0
         },
+        // Sync
         computed: {
             output: function() {
                 console.log('computer');
                 return this.counter > 5 ? 'Greater 5' : 'Smaller 5';
+            }
+        },
+        // Async
+        watch: {
+            // should match property name
+            counter: function(value) {
+                let vm = this;
+
+                setTimeout(function(value) {
+                    vm.counter = 0;    
+                }, 2000);
             }
         },
         methods: {
