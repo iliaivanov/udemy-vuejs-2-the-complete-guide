@@ -11,6 +11,8 @@
 
         <input type="text" v-on:input="changeMessage" />
         <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+        <hr>
+        <p v-html="finishedLink"></p>
     </div>
 
     <script>
@@ -18,7 +20,8 @@
             el: '#app',
             data: {
                 message: 'Yolo!',
-                link: 'http://google.com'
+                link: 'http://google.com',
+                finishedLink: '<a href="http://google.com">Google</a>'
             },
             methods: {
                 changeMessage: function (event) {
