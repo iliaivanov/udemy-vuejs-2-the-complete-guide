@@ -9,7 +9,8 @@
 
 <body>
     <div id="app">
-       <button v-on:click="increase">Click me</button>
+        <!-- $event - vue default variable to store event. -->
+       <button v-on:click="increase(2, $event)">Click me</button>
        <p>{{ counter }}</p>
        <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }} </p>
     </div>
@@ -23,8 +24,8 @@
                 y: 0
             },
             methods: {
-                increase: function() {
-                    this.counter++;
+                increase: function(value, event) {
+                    this.counter += value;
                 },
                 updateCoordinates: function(event) {
                     this.x = event.clientX;
