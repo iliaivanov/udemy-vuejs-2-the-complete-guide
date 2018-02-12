@@ -12,7 +12,15 @@
         <!-- $event - vue default variable to store event. -->
        <button v-on:click="increase(2, $event)">Click me</button>
        <p>{{ counter }}</p>
-       <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }} </p>
+       <p v-on:mousemove="updateCoordinates">
+           Coordinates: {{ x }} / {{ y }} 
+           <!-- 
+            Using event modifiers possible to stop propogating event when over span. 
+            This also can be achived without using midifiers but calling function which will call event.stopPropagating. 
+            Modifiers can be chained.
+            -->
+           - <span v-on:mousemove.stop="">DEAD SPOT</span>
+        </p>
     </div>
 
     <script>
