@@ -21,6 +21,11 @@
             -->
            - <span v-on:mousemove.stop="">DEAD SPOT</span>
         </p>
+        <!-- 
+            This is an example of keyboard key press event listening. Whithout modifiers it will trigger a callback every time button was pressed.
+            With chained modifiers it's possible to define particular keys.
+        -->
+        <input type="text" v-on:keyup.enter.space="alertMe" />
     </div>
 
     <script>
@@ -38,6 +43,9 @@
                 updateCoordinates: function(event) {
                     this.x = event.clientX;
                     this.y = event.clientY;
+                },
+                alertMe: function(event) {
+                    alert(event.target.value);
                 }
             }
         });
