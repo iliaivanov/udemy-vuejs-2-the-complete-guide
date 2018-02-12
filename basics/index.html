@@ -8,14 +8,15 @@
 <body>
     <div id="app">
         <input type="text" v-on:input="changeMessage" />
-        <p>{{sayHello()}}</p>
+        <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
     </div>
 
     <script>
         new Vue({
             el: '#app',
             data: {
-                message: 'Yolo!'
+                message: 'Yolo!',
+                link: 'http://google.com'
             },
             methods: {
                 changeMessage: function (event) {
