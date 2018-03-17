@@ -1,6 +1,6 @@
 new Vue({
-        el: '#exercise',
-        data: {
-            value: 0
-        }
-    });
+    el: '#exercise',
+    data: {
+        value: 0
+    }
+});
