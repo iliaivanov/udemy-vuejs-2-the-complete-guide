@@ -2,12 +2,26 @@
 
 <div id="app-1">
   <h1 ref="heading">{{ title }}</h1>
-  <button v-on:click="show">Show Paragraph</button>
+  <button v-on:click="show" ref="myButtonRef">Show Paragraph</button>
   <p v-if="showParagraph">This is not always visible</p>
+  <hello></hello>
+  <hello></hello>
 </div>
 
-<div id="app2">
+<div id="app-2">
   <h1 ref="heading">{{ title }}</h1>
+  <button @click="onChange">Change first instance</button>
+</div>
+
+<div id="app-3">
+
+</div>
+
+<hello></hello>
+
+<div class="hello">
+
 </div>
 
 <script src="app.js"></script>
+
