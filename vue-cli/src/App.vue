@@ -1,22 +1,12 @@
 <template>
-  <div id="app">
-    <h1>Hello world!</h1>  
-  </div>
+  <app-servers></app-servers>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  export default {
   }
-}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-}
+
 </style>
